@@ -7,16 +7,24 @@
 
 
 
-function checkUsersValid(validUsers) { //create a function checkUsersValid with goodUsers passed in
-      return function allUsersValid(submittedUsers) { // return a function allUsersValid with submittedUsers passed in
-        return submittedUsers.every(function(submit){ //return every submitted user who submitted
-          return validUsers.some(function(valid) { //return every user who submitted and is valid
-            if( valid.id === submit.id ) { //if the id of the valid user equals the id of the submitted user
-              return true; //show the list of users
-            }
-          })
-        });
-      };
-    };
+//create a function checkUsersValid with validUsers passed in
+// return a function allUsersValid with submittedUsers passed in
+//return every submitted user who submitted
+//return every user who submitted and is valid
+//if the id of the valid user equals the id of the submitted user
+//show the list of users
+
+
+  checkUsersValid = function(validUsers) {
+    return allUsersValid = function(submittedUsers) {
+      return submittedUsers.every(function(submit) {
+        return validUsers.some(function(valid) {
+          if (valid.id === submit.id) {
+            return true;
+          }
+        })
+      })
+    }
+  }
 
     module.exports = checkUsersValid
